@@ -16,8 +16,7 @@ void setup ()
     
     buttons = new MSButton[NUM_ROWS][NUM_COLS];
     for (int i=0; i<NUM_ROWS; i++)
-        for (int k=0; k<NUM_COLS; k++)
-        {
+        for (int k=0; k<NUM_COLS; k++){
             buttons[i][k] = new MSButton(i,k);
         }
     for (int j=0; j<=NUM_BOMBS; j++)
@@ -124,7 +123,7 @@ public class MSButton
         else if(bombs.contains(this))
             displayLosingMessage();
         else if(countBombs(r,c)>0)
-            label=(nf(countBombs(r,c),1));
+            setLabel(countBombs(r,c)+"");
         else if(countBombs(r,c)==0){
             if(isValid(r-1,c)) 
                 if(!buttons[r-1][c].isClicked())
