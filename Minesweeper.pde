@@ -68,8 +68,14 @@ public void displayLosingMessage()
     fill(150,0,0);
     textMode(CENTER);    
     text("Quack", 200, 410);
+    for (int i=0; i<NUM_ROWS; i++){
+        for (int k=0; k<NUM_COLS; k++)
+        {
+            if(bombs.contains(buttons[i][k]) && !buttons[i][k].isClicked())
+                buttons[i][k].mousePressed();
+        }
+    }
     noLoop();
-    
 }
 public void displayWinningMessage()
 {
