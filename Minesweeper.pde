@@ -65,7 +65,7 @@ public boolean isWon()
 public void displayLosingMessage()
 {
     fill(150,0,0);
-    textMode(CENTER);    
+    //textMode(CENTER);    
     text("Quack", 200, 410);
     for (int i=0; i<NUM_ROWS; i++){
         for (int k=0; k<NUM_COLS; k++)
@@ -79,7 +79,7 @@ public void displayLosingMessage()
 public void displayWinningMessage()
 {
     fill(0,100,0);
-    textMode(CENTER);
+    //textMode(CENTER);
     text("Moo", 200, 410);
 }
 
