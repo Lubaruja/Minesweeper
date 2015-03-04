@@ -70,8 +70,8 @@ public void displayLosingMessage()
     for (int i=0; i<NUM_ROWS; i++){
         for (int k=0; k<NUM_COLS; k++)
         {
-            if(bombs.contains(buttons[i][k]) && !buttons[i][k].isClicked())
-                buttons[i][k].mousePressed();
+            if(bombs.contains(buttons[i][k]))
+                buttons[i][k].setClicked(true);
         }
     }
     noLoop();
@@ -111,7 +111,10 @@ public class MSButton
         return clicked;
     }
     // called by manager
-    
+    public void setClicked(boolean moop)
+    {
+        clicked=moop;
+    }
     public void mousePressed () 
     {
         if(mouseButton==LEFT)
