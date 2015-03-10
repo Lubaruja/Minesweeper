@@ -74,7 +74,7 @@ public void displayLosingMessage()
                 buttons[i][k].setClicked(true);
         }
     }
-    noLoop();
+    
 }
 public void displayWinningMessage()
 {
